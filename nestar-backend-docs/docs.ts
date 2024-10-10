@@ -1220,3 +1220,51 @@ const docs = () => {};
 
 // 117th shu yerda yakunlandi
 // 수고 하셨습니다!
+
+
+// 2024-10-10
+// 135th Lesson
+// WebSocket va Chatting tizimini develop jarayonini yakunlaymiz
+
+// Darsimiz rejasi:
+// 1) WebSocket Server'ini develop jarayonini yakunlaymiz
+// 2) WebSocket Client mantig'ini develop jarayonini yakunlaymiz
+
+// ---------------------------------------------------
+
+// verbose => websocket'ga xos bo'lgan log qilish tizimi
+
+// Broad Casting => Ma'lumotni disconnect bo'lgan member'dan tashqari barcha client'larga yuborish mantig'i hisoblanadi.
+
+// emitMessage web-socket server'imizga ulangan hamma client'ga ma'lumotlarni yuborish uchun ishlatiladi.
+
+// ---------------------------------------------------
+// Create a Map:
+const fruits = new Map();
+
+// Set Map Values:
+fruits.set({ name: "apples" }, 500);
+fruits.set("bananas", 300);
+fruits.set("oranges", 200);
+
+console.log("fruits =>", fruits);
+console.log("fruits size =>", fruits.size);
+console.log(fruits.get("bananas"));
+
+// ---------------------------------------------------
+
+// MESSAGE TARGETING:
+
+// 1) Client (only client) => Ulangan client'ning o'ziga xabar yuborish:
+// client.send(JSON.stringify({ event: "getMessages", list: this.messageList }));
+
+// 2) Broadcasting (except client) => Ulangan yoki uzilgan client'dan tashqari jami client'larga yuborish:
+// this.broadcastMessage(client, infoMsg);
+
+// 3) Emitting (all clients) => Serverimizga ulangan jami client'larga ma'lumotlarni yuborish:
+// this.emitMessage(infoMsg);
+
+// ---------------------------------------------------
+
+// 135th shu yerda yakunlandi
+// 수고 하셨습니다!
